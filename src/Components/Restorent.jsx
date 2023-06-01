@@ -1,12 +1,13 @@
-//  import React from 'react';
- import './Restorent.css';
+ import React, { useState } from 'react';
+ import Menu from './MenuApi';
+ import MenuCards from './MenuCards';
 
 const Restorent = () => {
-  return (
-    <> 
-        <h1>Hello resturant</h1>
+    const[MenuData, setMenuData] = useState(Menu);
+
+    return <> 
+         <MenuCards MenuData = {MenuData} />
     </>
-  )
 }
 
 export default Restorent
